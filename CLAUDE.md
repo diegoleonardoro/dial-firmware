@@ -32,7 +32,15 @@ the iPhone app in `~/dial-app`.
 - `notify()` must never block `loop()`; `ble_link.cpp` counts in-flight notifications for this.
 - The sequence byte is stamped only when a notify succeeds.
 
-## Status
-Phase 3 of the build guide (breadboard prototype and firmware). Hardware hasn't arrived yet.
-Next steps are in README.md Part B (wiring, upload, nRF Connect tests). Don't tag 0.1.0 until
-the Phase 3 checklist in README.md passes.
+## Project tracking
+The plan and status for the whole project (both repos) live in `~/dial-app/docs/`:
+`PLAN.md` (checklist by phase), `STATUS.md` (snapshot), `DECISIONS.md`, `LOG.md`.
+- At the start of each session, read `~/dial-app/docs/STATUS.md` and the current phase in `PLAN.md`.
+- After completing a step, tick it in `PLAN.md`, update `STATUS.md`, and append a dated entry to
+  `LOG.md`. Record any design choice in `DECISIONS.md`.
+- Never tick a box unless the evidence exists (a file, a commit, a measured number). Steps that
+  need hardware stay unticked until Diego reports the result.
+- Those files are committed in the `dial-app` repo, not here.
+- Commands: `/status`, `/checkpoint`, `/gaps`.
+
+Don't tag `fw-0.1.0` until the Phase 3 checklist in README.md passes.
