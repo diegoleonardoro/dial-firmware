@@ -11,8 +11,11 @@ Extra notes from Diego: $ARGUMENTS
 2. `PLAN.md`: tick the boxes whose evidence now exists (file, commit, or a result Diego reported,
    with the number where the step asks for one). Add new steps that came up, tagged **ADDED**.
    Don't tick anything on assumption; if unsure, leave it unticked and list it in your reply.
-3. `STATUS.md`: rewrite the snapshot (date, phase, versions, done, in progress, blocked,
-   decisions needed, next 3 actions). Keep it under 40 lines.
+3. `STATUS.md`: rewrite the snapshot (date, phase, versions, "Where we left off", done, blocked,
+   decisions needed, next 3 actions). "Where we left off" has three lines: **Doing** (PLAN step
+   and the file being followed), **Last done** (the physical/repo state right now), **Next** (the
+   exact next action, specific enough that `/resume` in a new session can continue from it).
+   Keep the file under 45 lines.
 4. `DECISIONS.md`: append one entry per design choice made this session (date, decision, why,
    where it lives). Never rewrite old entries; a reversal is a new entry.
 5. `LOG.md`: append one dated entry (repos touched, what changed, commit hashes). Never edit

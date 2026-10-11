@@ -23,6 +23,8 @@ the iPhone app in `~/dial-app`.
 - `PROTOCOL.md` is the contract with `~/dial-app` and must stay byte-identical in both repos.
   Any protocol change updates both copies plus `dial_config.h` / `protocol.h`, and later the
   Swift code.
+- `BREADBOARD.md` + `docs/breadboard_map.png`: hole-by-hole breadboard layout (400-point board).
+  `docs/` is ignored by the Arduino build.
 
 ## Hard rules
 - `VBAT_ENABLE` (P0.14) is driven LOW as the first thing in `setup()` and must never be set HIGH
@@ -35,12 +37,20 @@ the iPhone app in `~/dial-app`.
 ## Project tracking
 The plan and status for the whole project (both repos) live in `~/dial-app/docs/`:
 `PLAN.md` (checklist by phase), `STATUS.md` (snapshot), `DECISIONS.md`, `LOG.md`.
-- At the start of each session, read `~/dial-app/docs/STATUS.md` and the current phase in `PLAN.md`.
-- After completing a step, tick it in `PLAN.md`, update `STATUS.md`, and append a dated entry to
-  `LOG.md`. Record any design choice in `DECISIONS.md`.
+- At the start of each session, read `~/dial-app/docs/STATUS.md` (start with "Where we left off")
+  and the current phase in `PLAN.md`.
+- After completing a step, tick it in `PLAN.md`, update `STATUS.md` (always including
+  "Where we left off": doing, last done, exact next step and the file that describes it), and
+  append a dated entry to `LOG.md`. Record any design choice in `DECISIONS.md`.
 - Never tick a box unless the evidence exists (a file, a commit, a measured number). Steps that
   need hardware stay unticked until Diego reports the result.
 - Those files are committed in the `dial-app` repo, not here.
-- Commands: `/status`, `/checkpoint`, `/gaps`.
+- Commands: `/resume` (where we left off + the next step), `/status`, `/checkpoint`, `/gaps`.
+
+## Working with Diego
+- Diego is new to electronics. Hardware instructions go one step at a time: exact holes and pins,
+  what he should see, what to report back. Define any term the first time it appears.
+- He shares iPhone photos as `.HEIC` in `~/Downloads`; convert with `sips -s format jpeg` to view.
+  Use his photos in explanations (annotate them when it helps).
 
 Don't tag `fw-0.1.0` until the Phase 3 checklist in README.md passes.

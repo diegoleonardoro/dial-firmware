@@ -89,7 +89,7 @@
 // ---------------------------------------------------------------------------
 // Turn DEBUG_SERIAL off (0) for the 0.2.0 release build: it is for development only.
 #define DEBUG_SERIAL              1
-#define DEBUG_WAIT_FOR_SERIAL_MS  0
+#define DEBUG_WAIT_FOR_SERIAL_MS  3000
 
 #if DEBUG_SERIAL
   #define DBG(...)    Serial.printf(__VA_ARGS__)

@@ -98,6 +98,8 @@ Do not tag 0.1.0 yet; that happens when the hardware checklist passes.
 
 ### B2. Wire the breadboard
 
+Hole-by-hole layout for the 400-point breadboard: `BREADBOARD.md` and `docs/breadboard_map.png`.
+
 Unplug USB while wiring. Put the XIAO across the centre gap of the breadboard, USB end facing out.
 Run a wire from the XIAO **GND** pin to the breadboard's blue (−) rail. Everything below that
 says "GND" goes to that rail.
